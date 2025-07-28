@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My profile page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dang Hoang Anh Quan - AI Engineer</title> <!-- Slightly more descriptive title -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <!--<img src="xxx.jpg" alt="Dang Hoang Anh Quan">-->
+        <!-- <img src="img/xxx.jpg" alt="Dang Hoang Anh Quan"> -->
         <h1>Dang Hoang Anh Quan</h1>
-        <p>AI Engineer/Developer</p>
+        <p>AI Engineer & Developer</p> <!-- Minor text tweak -->
     </header>
-    <main>
+
+    <main class="grid-container"> <!-- Added class for grid layout -->
         <section id="about">
             <h2>About Me</h2>
-            <p>Welcome to my profile page! I am an AI Engineer/Developer with over 1 year of experience. I mainly work in machine learning applied in audio, with a strong focus on NLP. Currently I am working on ItinerAIry, a project that aims to help enable everyone to travel by creating their own travel itinerary using AI.</p>
+            <p>Hello and welcome to my profile. I'm an AI Engineer/Developer with hands-on experience in applying machine learning to real-world problems—particularly in the audio and natural language processing (NLP) domains.</p>
+            <p>My current focus is on <strong>ItinerAIry</strong>, a personal project that leverages AI to help people from all walks of life plan affordable, personalized travel itineraries. I’m passionate about building inclusive technology that makes complex tasks like trip planning more accessible and enjoyable for everyone.</p>
         </section>
+
         <section id="skills">
             <h2>Skills</h2>
             <ul>
@@ -30,10 +33,11 @@
                 <li>PyTorch</li>
             </ul>
         </section>
+
         <section id="experience">
             <h2>Professional Experience</h2>
 
-            <article>
+            <article class="job"> <!-- Added class for consistent job styling -->
                 <h3>ItinerAIry</h3>
                 <p><strong>Founder & Developer</strong><br>
                 <time datetime="2025-07">July 2025</time> – <span>Present</span></p>
@@ -42,10 +46,11 @@
                     <li>Designed to be inclusive, enabling users from all financial backgrounds to prepare for their dream trips.</li>
                     <li>Leveraging natural language processing (NLP) and machine learning to generate intelligent itinerary suggestions and enhance user experience.</li>
                 </ul>
-                <p><strong>Try the app now: </strong><a href="https://itinerairy.vercel.app/" target="_blank" rel="noopener noreferrer">ItinerAIry</a></p>
+                 <!-- Moved "Try the app" outside the <ul> for better semantics -->
+                <p><a href="projects/itinerairy.html">Read more</a></p>
             </article>
 
-            <article>
+            <article class="job">
                 <h3>Tri Nam Group</h3>
                 <p><strong>AI Developer</strong><br>
                 <time datetime="2025-04">April 2025</time> – <span>Present</span></p>
@@ -56,7 +61,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article class="job">
                 <h3>AIM JSC</h3>
                 <p><strong>AI Engineer</strong><br>
                 <time datetime="2024-01">January 2024</time> – <time datetime="2024-08">August 2024</time></p>
@@ -67,7 +72,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article class="job">
                 <h3>Tri Nam Group</h3>
                 <p><strong>AI Developer Intern</strong><br>
                 <time datetime="2023-01">January 2023</time> – <time datetime="2023-12">December 2023</time></p>
@@ -79,11 +84,15 @@
             </article>
         </section>
     </main>
+
     <footer>
         <h2>Contact Me</h2>
-        <p>Send an email at: <a href="mailto:anhquan200989@gmail.com">anhquan200989@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/quandh2009/" target="_blank" rel="noopener noreferrer">My LinkedIn profile</a></p>
-        <p>GitHub: <a href="https://github.com/anhquan200902" target="_blank" rel="noopener noreferrer">My GitHub profile</a></p>
+         <!-- Grouped contact links for better layout -->
+        <div class="contact-links">
+            <p>Email: <a href="mailto:anhquan200989@gmail.com">anhquan200989@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/quandh2009/" target="_blank" rel="noopener noreferrer">My LinkedIn Profile</a></p>
+            <p>GitHub: <a href="https://github.com/anhquan200902" target="_blank" rel="noopener noreferrer">My GitHub Profile</a></p>
+        </div>
         <p>&copy; 2025 Dang Hoang Anh Quan. All rights reserved.</p>
     </footer>
 </body>

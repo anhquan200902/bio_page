@@ -1,0 +1,202 @@
+/* style.css */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Very light gray background */
+    color: #212529; /* Dark text for contrast */
+    padding: 15px;
+}
+
+a {
+    color: #1976d2; /* Professional blue link color */
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder links */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0d47a1; /* Darker blue on hover */
+}
+
+/* Header */
+header {
+    background-color: #ffffff; /* White background */
+    color: #212529;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #dee2e6; /* Light border for definition */
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    color: #1976d2; /* Blue header text */
+}
+
+/* Main Content Grid */
+main {
+    margin-bottom: 30px; /* Space before footer */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* Sections */
+main section {
+    background-color: #ffffff; /* White card background */
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+    border: 1px solid #dee2e6; /* Light border */
+}
+
+main h2 {
+    margin-bottom: 12px;
+    color: #1976d2; /* Professional blue for section headings */
+    font-size: 1.4rem;
+    border-bottom: 1px solid #e9ecef; /* Light separator line */
+    padding-bottom: 5px;
+}
+
+/* Lists */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Skills List Items Hover */
+#skills li {
+    transition: color 0.2s ease;
+}
+#skills li:hover {
+    color: #0d47a1; /* Darker blue highlight on hover */
+}
+
+/* Job Articles */
+.job {
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e9ecef; /* Light separator */
+}
+.job:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.job h3 {
+    font-size: 1.2rem;
+    color: #212529; /* Dark text */
+    margin-bottom: 5px;
+}
+
+.job p {
+    font-style: italic;
+    margin-bottom: 8px;
+    color: #6c757d; /* Muted gray for secondary text */
+}
+
+.job time, .job span {
+    color: #6c757d; /* Style dates consistently */
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff; /* White background */
+    color: #212529;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #dee2e6; /* Light border */
+    font-size: 0.9rem;
+}
+
+footer h2 {
+    color: #1976d2; /* Blue heading */
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.contact-links p {
+    margin-bottom: 6px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Responsive Grid Layout */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    body {
+        padding: 20px;
+    }
+    header, main section, footer {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        /* Stack About and Skills vertically in the first column, Experience in the second */
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "about experience"
+            "skills experience";
+        gap: 20px; /* Gap between columns/rows */
+    }
+
+    /* Assign grid areas to sections */
+    #about {
+        grid-area: about;
+    }
+
+    #skills {
+        grid-area: skills;
+    }
+
+    #experience {
+        grid-area: experience;
+    }
+
+    body {
+        padding: 25px;
+    }
+    header, main section, footer {
+        padding: 25px;
+    }
+}
+
+/* Ensure code/tags are visible */
+code, time, span {
+    color: inherit;
+}
+
+/* Ensure strong tags stand out */
+strong {
+    color: #0d47a1; /* Darker blue for strong text */
+}
