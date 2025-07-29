@@ -1,99 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dang Hoang Anh Quan - AI Engineer</title> <!-- Slightly more descriptive title -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dang Hoang Anh Quan — AI Engineer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <!-- <img src="img/xxx.jpg" alt="Dang Hoang Anh Quan"> -->
+  <!-- ===================  HEADER  =================== -->
+  <header>
+    <div class="container header-inner">
+      <picture>
+        <source srcset="img/profile.webp" type="image/webp" />
+        <!--<img src="img/profile.jpg" alt="Dang Hoang Anh Quan" width="128" height="128" />-->
+      </picture>
+      <div>
         <h1>Dang Hoang Anh Quan</h1>
-        <p>AI Engineer & Developer</p> <!-- Minor text tweak -->
-    </header>
+        <p class="tagline">AI Engineer & Developer</p>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <main class="grid-container"> <!-- Added class for grid layout -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello and welcome to my profile. I'm an AI Engineer/Developer with hands-on experience in applying machine learning to real-world problems—particularly in the audio and natural language processing (NLP) domains.</p>
-            <p>My current focus is on <strong>ItinerAIry</strong>, a personal project that leverages AI to help people from all walks of life plan affordable, personalized travel itineraries. I’m passionate about building inclusive technology that makes complex tasks like trip planning more accessible and enjoyable for everyone.</p>
-        </section>
+  <!-- ===================  MAIN  =================== -->
+  <main class="container">
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Hello and welcome to my profile. I'm an AI Engineer/Developer with hands-on experience in applying machine learning to real-world problems — particularly in the audio and natural language processing (NLP) domains.</p>
+      <p>My current focus is on <strong>ItinerAIry</strong>, a personal project that leverages AI to help people from all walks of life plan affordable, personalized travel itineraries. I’m passionate about building inclusive technology that makes complex tasks like trip planning more accessible and enjoyable for everyone.</p>
+    </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Machine Learning</li>
-                <li>Natural Language Processing (NLP)</li>
-                <li>Audio Processing</li>
-                <li>Python Programming</li>
-                <li>SQL</li>
-                <li>Git</li>
-                <li>TensorFlow</li>
-                <li>PyTorch</li>
-            </ul>
-        </section>
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul class="skills-grid">
+        <li>Machine Learning</li>
+        <li>Natural Language Processing (NLP)</li>
+        <li>Audio Processing</li>
+        <li>Python Programming</li>
+        <li>SQL</li>
+        <li>Git</li>
+        <li>TensorFlow</li>
+        <li>PyTorch</li>
+      </ul>
+    </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card">
+      <h2>Professional Experience</h2>
 
-            <article class="job"> <!-- Added class for consistent job styling -->
-                <h3>ItinerAIry</h3>
-                <p><strong>Founder & Developer</strong><br>
-                <time datetime="2025-07">July 2025</time> – <span>Present</span></p>
-                <ul>
-                    <li>Building an AI-powered web/mobile platform to help users plan budget-conscious, personalized travel itineraries.</li>
-                    <li>Designed to be inclusive, enabling users from all financial backgrounds to prepare for their dream trips.</li>
-                    <li>Leveraging natural language processing (NLP) and machine learning to generate intelligent itinerary suggestions and enhance user experience.</li>
-                </ul>
-                 <!-- Moved "Try the app" outside the <ul> for better semantics -->
-                <p><a href="projects/itinerairy.html">Read more</a></p>
-            </article>
+      <article class="job">
+        <h3>ItinerAIry <span class="badge">Founder & Developer</span></h3>
+        <p class="date"><time datetime="2025-07">July 2025</time> – Present</p>
+        <ul>
+          <li>Building an AI-powered web/mobile platform to help users plan budget-conscious, personalized travel itineraries.</li>
+          <li>Designed to be inclusive, enabling users from all financial backgrounds to prepare for their dream trips.</li>
+          <li>Leveraging NLP and machine learning to generate intelligent itinerary suggestions and enhance user experience.</li>
+        </ul>
+        <a href="projects/itinerairy.html" class="cta">Read more&nbsp;&rarr;</a>
+      </article>
 
-            <article class="job">
-                <h3>Tri Nam Group</h3>
-                <p><strong>AI Developer</strong><br>
-                <time datetime="2025-04">April 2025</time> – <span>Present</span></p>
-                <ul>
-                    <li>Developing real-time translation systems to bridge language gaps between Vietnam’s ethnic minority communities and Vietnamese.</li>
-                    <li>Built a speech-to-text pipeline integrated with live conference cameras to support inclusive communication.</li>
-                    <li>Focusing on low-resource language processing and voice AI for underrepresented groups.</li>
-                </ul>
-            </article>
+      <article class="job">
+        <h3>Tri Nam Group <span class="badge">AI Developer</span></h3>
+        <p class="date"><time datetime="2025-04">April 2025</time> – Present</p>
+        <ul>
+          <li>Developing real-time translation systems to bridge language gaps between Vietnam’s ethnic minority communities and Vietnamese.</li>
+          <li>Built a speech-to-text pipeline integrated with live conference cameras to support inclusive communication.</li>
+          <li>Focusing on low-resource language processing and voice AI for underrepresented groups.</li>
+        </ul>
+      </article>
 
-            <article class="job">
-                <h3>AIM JSC</h3>
-                <p><strong>AI Engineer</strong><br>
-                <time datetime="2024-01">January 2024</time> – <time datetime="2024-08">August 2024</time></p>
-                <ul>
-                    <li>Designed a copyright infringement detection engine using multimodal (image/audio) analysis.</li>
-                    <li>Created a deep learning model to classify video content by genre using CNNs.</li>
-                    <li>Delivered solutions for media compliance and content regulation in digital platforms.</li>
-                </ul>
-            </article>
+      <article class="job">
+        <h3>AIM JSC <span class="badge">AI Engineer</span></h3>
+        <p class="date"><time datetime="2024-01">January 2024</time> – <time datetime="2024-08">August 2024</time></p>
+        <ul>
+          <li>Designed a copyright infringement detection engine using multimodal (image/audio) analysis.</li>
+          <li>Created a deep learning model to classify video content by genre using CNNs.</li>
+          <li>Delivered solutions for media compliance and content regulation in digital platforms.</li>
+        </ul>
+      </article>
 
-            <article class="job">
-                <h3>Tri Nam Group</h3>
-                <p><strong>AI Developer Intern</strong><br>
-                <time datetime="2023-01">January 2023</time> – <time datetime="2023-12">December 2023</time></p>
-                <ul>
-                    <li>Built a voice-based age prediction model using speech feature extraction and supervised learning techniques.</li>
-                    <li>Led data collection efforts for a Vietnamese speech-to-text system, covering diverse regional accents and dialects.</li>
-                    <li>Contributed to improving accessibility for speech AI in a multilingual environment.</li>
-                </ul>
-            </article>
-        </section>
-    </main>
+      <article class="job">
+        <h3>Tri Nam Group <span class="badge">AI Developer Intern</span></h3>
+        <p class="date"><time datetime="2023-01">January 2023</time> – <time datetime="2023-12">December 2023</time></p>
+        <ul>
+          <li>Built a voice-based age prediction model using speech feature extraction and supervised learning techniques.</li>
+          <li>Led data collection efforts for a Vietnamese speech-to-text system, covering diverse regional accents and dialects.</li>
+          <li>Contributed to improving accessibility for speech AI in a multilingual environment.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
 
-    <footer>
-        <h2>Contact Me</h2>
-         <!-- Grouped contact links for better layout -->
-        <div class="contact-links">
-            <p>Email: <a href="mailto:anhquan200989@gmail.com">anhquan200989@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/quandh2009/" target="_blank" rel="noopener noreferrer">My LinkedIn Profile</a></p>
-            <p>GitHub: <a href="https://github.com/anhquan200902" target="_blank" rel="noopener noreferrer">My GitHub Profile</a></p>
-        </div>
-        <p>&copy; 2025 Dang Hoang Anh Quan. All rights reserved.</p>
-    </footer>
+  <!-- ===================  FOOTER  =================== -->
+  <footer>
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-links">
+        <a href="mailto:anhquan200989@gmail.com"><i class="fas fa-envelope"></i> anhquan200989@gmail.com</a>
+        <a href="https://www.linkedin.com/in/quandh2009/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/anhquan200902" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+      <p>&copy; 2025 Dang Hoang Anh Quan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================  JS (tiny)  =================== -->
+  <script>
+    /*  Dark / Light Mode  */
+    const toggleBtn = document.getElementById('theme-toggle');
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark') document.documentElement.classList.add('dark');
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      toggleBtn.querySelector('i').classList.toggle('fa-moon');
+      toggleBtn.querySelector('i').classList.toggle('fa-sun');
+    });
+  </script>
+  <a id="top-btn" href="#top" aria-label="Back to top">
+    <i class ="fas fa-chevron-up"></i>
+</a>
+<script>
+    window.addEventListener('scroll', () => {
+        const topBtn = document.getElementById('top-btn');
+        topBtn.classList.toggle('show', window.scrollY > 600);
+    });
+    document.getElementById('top-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 </body>
 </html>
