@@ -16,6 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Preload critical resources -->
+  <link rel="preload" href="style.css" as="style">
+
   <style>
     /* =====  DESIGN TOKENS  ===== */
     :root {
@@ -90,9 +93,13 @@
       border-radius: var(--radius);
       padding: 2rem;
       margin-bottom: 2rem;
-      transition: transform var(--transition);
+      transition: transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 2px 4px rgba(0,0,0,.05);
     }
-    .card:hover { transform: translateY(-4px); }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,.1);
+    }
 
     /* =====  PRICING TABLE  ===== */
     .pricing {
@@ -115,6 +122,51 @@
       margin: .5rem 0 1rem;
       color: var(--accent);
     }
+.price-unit {
+      font-size: 1rem;
+    }
+    /* ===== CTA BANNER ===== */
+    .cta-banner {
+    background: var(--accent);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    }
+.cta-banner h3 {
+  font-size: 1.75rem;
+  margin-bottom: .5rem;
+}
+.cta-banner p {
+  margin-bottom: 1.5rem;
+  opacity: .9;
+}
+.cta-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: transform .2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.btn.primary {
+  background: #fff;
+  color: var(--accent);
+}
+.btn.secondary {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+}
 
     /* =====  FOOTER  ===== */
     footer {
@@ -138,9 +190,41 @@
     }
 
     /* =====  RESPONSIVE  ===== */
+    @media (max-width: 1024px) {
+      .container {
+        width: 92%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .section { padding: 3rem 0; }
+      .hero { padding-top: 4rem; }
+      .card { padding: 1.5rem; }
+      .pricing {
+        grid-template-columns: 1fr;
+      }
+      .cta-banner {
+        padding: 2rem 1rem;
+      }
+    }
+    
     @media (max-width: 600px) {
       .section { padding: 2.5rem 0; }
       .hero { padding-top: 3rem; }
+      .card { padding: 1.25rem; }
+      .plan {
+        padding: 1.5rem;
+      }
+      .cta-banner {
+        padding: 1.5rem 1rem;
+      }
+      .cta-banner h3 {
+        font-size: 1.5rem;
+      }
+      .btn {
+        padding: .5rem 1rem;
+        font-size: .9rem;
+      }
     }
   </style>
 </head>
@@ -157,8 +241,8 @@
       <h1>ItinerAIry</h1>
       <p>Travel planning, powered by AI — and heart.</p>
       <div class="quote">
-        “I didn’t grow up traveling.<br>
-        So I built a tool so others like me could.”
+        <p>“I didn’t grow up traveling.<br>
+        So I built a tool so others like me could.”</p>
       </div>
     </div>
   </header>
@@ -231,7 +315,7 @@
 
         <div class="plan">
           <h3>Pro</h3>
-          <div class="price">$5<span style="font-size:1rem">/mo</span></div>
+          <div class="price">$5<span class="price-unit">/mo</span></div>
           <ul>
             <li>Unlimited trips</li>
             <li>Saved itineraries</li>
@@ -242,7 +326,7 @@
 
         <div class="plan">
           <h3>Family</h3>
-          <div class="price">$10<span style="font-size:1rem">/mo</span></div>
+          <div class="price">$10<span class="price-unit">/mo</span></div>
           <ul>
             <li>Group collaboration</li>
             <li>Shared budgets</li>
@@ -267,7 +351,20 @@
       </ul>
     </div>
   </section>
-
+  <section class="cta-banner">
+  <div class="container">
+    <h3>Ready to plan your first trip?</h3>
+    <p>Jump straight into the live app or explore the code.</p>
+    <div class="cta-links">
+      <a href="https://itinerairy.vercel.app" target="_blank" rel="noopener noreferrer" class="btn primary">
+        <i class="fas fa-rocket"></i> Open App
+      </a>
+      <a href="https://github.com/anhquan200902/itinerairy" target="_blank" rel="noopener noreferrer" class="btn secondary">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </div>
+</section>
   <!-- ==========  FOOTER  ========== -->
   <footer>
     <div class="container">

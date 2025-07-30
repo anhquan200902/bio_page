@@ -11,6 +11,9 @@
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+  <!-- Preload critical resources -->
+  <link rel="preload" href="css/style.css" as="style">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -20,7 +23,7 @@
     <div class="container header-inner">
       <picture>
         <source srcset="img/profile.webp" type="image/webp" />
-        <!--<img src="img/profile.jpg" alt="Dang Hoang Anh Quan" width="128" height="128" />-->
+        <img src="img/profile.jpg" alt="Dang Hoang Anh Quan" width="128" height="128" loading="lazy" />
       </picture>
       <div>
         <h1>Dang Hoang Anh Quan</h1>
@@ -37,8 +40,8 @@
     <!-- ABOUT -->
     <section id="about" class="card">
       <h2>About Me</h2>
-      <p>Hello and welcome to my profile. I'm an AI Engineer/Developer with hands-on experience in applying machine learning to real-world problems — particularly in the audio and natural language processing (NLP) domains.</p>
-      <p>My current focus is on <strong>ItinerAIry</strong>, a personal project that leverages AI to help people from all walks of life plan affordable, personalized travel itineraries. I’m passionate about building inclusive technology that makes complex tasks like trip planning more accessible and enjoyable for everyone.</p>
+      <p>Hello and welcome to my profile. I'm an AI Engineer/Developer with hands-on experience in applying machine learning to real-world problems, particularly in the audio and natural language processing (NLP) domains.</p>
+      <p>My current focus is on <strong>ItinerAIry</strong>, a personal project that leverages AI to help people from all walks of life plan affordable, personalized travel itineraries. I’m passionate about building inclusive technology that makes complex - and often tedious - tasks like trip planning more accessible and enjoyable for everyone.</p>
     </section>
 
     <!-- SKILLS -->
@@ -129,10 +132,7 @@
       toggleBtn.querySelector('i').classList.toggle('fa-sun');
     });
   </script>
-  <a id="top-btn" href="#top" aria-label="Back to top">
-    <i class ="fas fa-chevron-up"></i>
-</a>
-<script>
+  <script>
     window.addEventListener('scroll', () => {
         const topBtn = document.getElementById('top-btn');
         topBtn.classList.toggle('show', window.scrollY > 600);
@@ -141,6 +141,9 @@
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-</script>
+  </script>
+  <a id="top-btn" href="#top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
 </body>
 </html>
